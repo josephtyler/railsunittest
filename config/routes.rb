@@ -1,4 +1,9 @@
 Railsunittest::Application.routes.draw do
+
+  get "menu/show"
+  get '/', to: 'menu#show'
+  get 'menu', to: 'menu#show'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -46,9 +46,9 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: tmp_test
+  database: railsunittest_test 
   pool: 5
-  username: tmp
+  username: railsunittest
   password:
 
 production:
