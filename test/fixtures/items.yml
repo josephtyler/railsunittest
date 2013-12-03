@@ -1,36 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-coffee_1:
-  name: House Coffee 
+one:
+  name: MyString
 
-coffee_2:
-  name: Iced Toddy Coffee
-
-coffee_3:
-  name: Double Espresso
-
-coffee_4: 
-  name: Espresso Machiato
-
-coffee_5:
-  name: Americano
-
-coffee_6:
-  name: Latte
-
-coffee_7:
-  name: Cappucino
-
-coffee_8:
-  name: Dark Chocolate Mocha
-
-coffee_9:
-  name: White Chocolate Mocha
-
-coffee_10:
-  name: Frappe
-
-<% 25.times do |n| %>
-<%= "#{n + 11}" %>:
-  name: coffee_<%= "#{n + 11}" %>
-<% end %>
+two:
+  name: MyString

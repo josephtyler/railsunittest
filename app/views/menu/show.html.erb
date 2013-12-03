@@ -1,3 +1,14 @@
+<div class="container">
+<ul>
 <% @items.each do |item| %>
-  <p><%= item.name %></p>
+  <li><%= item.name %></li>
+  <% unless item.options.empty? %>
+    <ul class="options">
+    <% item.options.each do |opt| %>
+      <li><%= opt.name %> - <%= opt.price %></li>
+    <% end %>
+    </ul>
+  <% end %>
 <% end %>
+</ul>
+</div>

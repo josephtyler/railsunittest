@@ -1,5 +1,8 @@
 Railsunittest::Application.routes.draw do
 
+  resources :items
+  resources :options
+
   get "menu/show"
   get '/', to: 'menu#show'
   get 'menu', to: 'menu#show'

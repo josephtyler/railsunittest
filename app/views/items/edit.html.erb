@@ -1,0 +1,16 @@
+<h1>Editing item</h1>
+
+<%= render 'form' %>
+
+<% unless @options.empty? %>
+  <h3>Options</h3>
+  <% @options.each do |opt| %>
+    <p><%= opt[:name] %> - <%= opt[:price] %></p>
+  <% end %>
+<% else %>
+<p>There are no options for this item.</p>
+<% end %>
+
+<%= link_to 'Add Options', controller: 'options', action: 'new', for_item: @item.id %> |
+<%= link_to 'Show', @item %> |
+<%= link_to 'Back', items_path %>
