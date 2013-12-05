@@ -1,7 +1,7 @@
 Rails Testing
 =============
 
-This is an example application utilizing rails built it unit testing and functional testing.
+A demonstration of Rails' built-in unit testing and functional testing.
 
 This was built using Ruby 2.0.0, Rails 4.0.1, and Postgres 9.1.
 
