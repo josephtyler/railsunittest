@@ -37,7 +37,8 @@ class OptionsController < ApplicationController
         format.html { redirect_to @option, notice: 'Option was successfully created.' }
         format.json { render action: 'show', status: :created, location: @option }
       else
-        format.html { render action: 'new' }
+        format.html { redirect_to controller: "items", notice: 'Could not create option' }
+        #format.html { render action: 'new', for_item: @option.item_id }
         format.json { render json: @option.errors, status: :unprocessable_entity }
       end
     end

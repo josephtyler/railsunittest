@@ -3,11 +3,24 @@
 $dark-color: #222;
 $chalk-color: #fafafa;
 $chalk-font: 'Oranienbaum', serif;
+$dark-red: #a60000;
+$light-red: #ff0000;
+$dark-blue: #006363;
+$light-blue: #009999;
+$dark-green: #679b00;
+$light-green: #9fee00;
 
 body {
   font-family: serif; 
   background-color: $dark-color;
   color: $chalk-color;
+}
+
+a {
+  color: $light-green;
+  &:hover {
+		color: $dark-green;
+	}
 }
 
 h1 {
@@ -38,12 +51,49 @@ h6 {
 }
 
 p {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .container {
   width: 1140px;
   margin: 0 auto;
+}
+
+.option-container {}
+
+.option-set {
+  display: inline-block;
+}
+
+.option-price {
+  font-size: 15px;
+  display: block;
+	text-align: center;
+}
+
+.option-name {
+  font-size: 15px;
+  display: block;
+  color: $light-blue;
+	text-shadow: 0px 1px 0px $dark-blue;
+	border-bottom: 1px solid $light-blue;
+ 	margin-bottom: 3px;
+	text-align: center;
+}
+
+.menu-items {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul li {
+		padding: 10px 0;
+		border-bottom: 1px dashed #555;
+	}
+	div.option-set {
+		margin: 0px 13px;
+	}
 }
 
 @media (max-width: 1200px) {

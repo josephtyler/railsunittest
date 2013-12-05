@@ -3,10 +3,14 @@
 <%= render 'form' %>
 
 <% unless @options.empty? %>
-  <h3>Options</h3>
+  <div class="option-container">
   <% @options.each do |opt| %>
-    <p><%= opt[:name] %> - <%= opt[:price] %></p>
+    <div class="option-set">
+      <span class="option-name"><%= opt[:name] %></span>
+      <span class="option-price">$<%= '%.2f' % (opt[:price_in_cents].to_f / 100) %></span>
+    </div>
   <% end %>
+  </div>
 <% else %>
 <p>There are no options for this item.</p>
 <% end %>

@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  <header>
+    <h1 class="title"><a href="/">The Coffee Tree Menu</a></h1>
+  </header>
+  
+  <%= yield %>
 
-<%= yield %>
-
+</div>
 </body>
 </html>

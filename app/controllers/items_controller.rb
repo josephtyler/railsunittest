@@ -19,7 +19,8 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
-    @options = Option.find :all, :conditions => { :item_id => params[:id] }
+    #@options = Option.all :conditions => { :item_id => params[:id] }
+		@options = Option.where( item_id: params[:id] ).to_a
     #@options[:price] = @options[:price_in_cents].to_i / 100
   end
 

@@ -1,14 +1,19 @@
-<div class="container">
-<ul>
-<% @items.each do |item| %>
-  <li><%= item.name %></li>
-  <% unless item.options.empty? %>
-    <ul class="options">
-    <% item.options.each do |opt| %>
-      <li><%= opt.name %> - <%= opt.price %></li>
-    <% end %>
-    </ul>
-  <% end %>
-<% end %>
-</ul>
+<div class="menu-items">	
+	<ul>
+	<% @items.each do |item| %>
+		<li>
+			<h2><%= item.name %></h2>
+			<% unless item.options.empty? %>
+				<div class="option-container">
+				<% item.options.each do |opt| %>
+					<div class="option-set">
+						<span class="option-name"><%= opt.name %></span>
+						<span class="option-price">$<%= '%.2f' % (opt[:price_in_cents].to_f / 100) %></span>
+					</div>
+				<% end %>
+				</div>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
 </div>
