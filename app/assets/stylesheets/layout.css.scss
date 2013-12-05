@@ -1,8 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Oranienbaum);
+@import url(http://fonts.googleapis.com/css?family=Allerta);
 
 $dark-color: #222;
 $chalk-color: #fafafa;
-$chalk-font: 'Oranienbaum', serif;
+$chalk-font: 'Allerta', sans-serif;
+$standard-font: Helvetica;
 $dark-red: #a60000;
 $light-red: #ff0000;
 $dark-blue: #006363;
@@ -11,7 +12,7 @@ $dark-green: #679b00;
 $light-green: #9fee00;
 
 body {
-  font-family: serif; 
+  font-family: $standard-font; 
   background-color: $dark-color;
   color: $chalk-color;
 }
