@@ -7,7 +7,7 @@ class OptionsControllerTest < ActionController::TestCase
 
   test "should redirect index to items" do
     get :index
-		assert_redirect_to controller: "items"
+		assert_redirected_to controller: "items"
   end
 
   test "should get new" do
@@ -40,7 +40,8 @@ class OptionsControllerTest < ActionController::TestCase
   end
 
   test "should update option" do
-    patch :update, id: @option, option: { name: @option.name, price_in_cents: @option.price_in_cents }
+		item = Item.first
+    patch :update, id: @option, option: { name: @option.name, price_in_cents: @option.price_in_cents, item_id: item[:id] }
     assert_redirected_to option_path(assigns(:option))
   end
 

@@ -17,10 +17,11 @@ class OptionsController < ApplicationController
   def new
     unless params[:for_item]
       redirect_to controller: 'items'
-    end
-    @item = Item.find params[:for_item]
-    @option = Option.new
-    @option[:item_id] = params[:for_item]
+		else
+    	@item = Item.find params[:for_item]
+    	@option = Option.new
+    	@option[:item_id] = params[:for_item]
+		end
   end
 
   # GET /options/1/edit
@@ -38,7 +39,6 @@ class OptionsController < ApplicationController
         format.json { render action: 'show', status: :created, location: @option }
       else
         format.html { redirect_to controller: "items", notice: 'Could not create option' }
-        #format.html { render action: 'new', for_item: @option.item_id }
         format.json { render json: @option.errors, status: :unprocessable_entity }
       end
     end
@@ -52,7 +52,7 @@ class OptionsController < ApplicationController
         format.html { redirect_to @option, notice: 'Option was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { redirect_to controller: "items", notice: 'Could not update option' }
         format.json { render json: @option.errors, status: :unprocessable_entity }
       end
     end
